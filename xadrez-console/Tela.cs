@@ -14,8 +14,7 @@ namespace xadrez_console {
             Console.WriteLine("Turno: " + partida.turno);
             if (!partida.terminada) {
                 Console.WriteLine("Aguardando jogada: " + partida.jogadorAtual);
-            }
-            if (partida.xeque) {
+            } else if (partida.xeque) {
                 Console.WriteLine("XEQUE!");
             } else {
                 Console.WriteLine("XEQUE-MATE!");
@@ -53,7 +52,7 @@ namespace xadrez_console {
                 }
                 Console.WriteLine();
             }
-            Console.WriteLine("  a b c d e f g h");
+            Console.WriteLine("  a  b  c  d  e  f  g  h");
         }
 
         public static void imprimirTabuleiro(Tabuleiro tab, bool[,] posicoesPossiveis) {
@@ -74,7 +73,7 @@ namespace xadrez_console {
                 }
                 Console.WriteLine();
             }
-            Console.WriteLine("  a b c d e f g h");
+            Console.WriteLine("  a  b  c  d  e  f  g  h");
             Console.BackgroundColor = fundoOriginal;
         }
 
@@ -88,7 +87,7 @@ namespace xadrez_console {
         public static void imprimirPeca(Peca peca) {
 
             if (peca == null) {
-                Console.Write("-");
+                Console.Write("- ");
             } else {
 
                 if (peca.cor == Cor.Branca) {
